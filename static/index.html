@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Birthday Celebration 🎉</title>
+    <meta name="description" content="Interactive birthday surprise with candles, confetti, balloons & personalized wish." />
+    <meta name="theme-color" content="#f43f5e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="decor" aria-hidden="true">
+      <div class="glow glow--1"></div>
+      <div class="glow glow--2"></div>
+      <div class="stars"></div>
+    </div>
+    <main class="page">
+      <header class="site-header">
+        <div class="inner header-inner">
+          <div class="branding">
+            <h1 class="site-title"><span class="spark">✧</span> Birthday Magic <span class="spark">✧</span></h1>
+            <p class="tagline">Light the candles, make a wish, celebrate!</p>
+          </div>
+          <div class="header-actions">
+            <button id="palette-btn" class="btn btn-ghost" type="button" aria-label="Toggle color theme" title="Toggle colors">🎨</button>
+            <button id="music-btn" class="btn btn-ghost" type="button" aria-label="Mute music" title="Toggle music">🎵</button>
+            <button id="replay-btn" class="btn btn-ghost hidden" type="button" aria-label="Replay celebration">↺ Replay</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="experience">
+        <div class="inner grid">
+          <!-- Cake -->
+            <div class="celebration-stage">
+              <div class="cake float" role="img" aria-label="A birthday cake with frosting and candles">
+                <div class="cake__plate"></div>
+                <div class="cake__body">
+                  <div class="cake__plaque" id="cake-name">Sanjana</div>
+                  <div class="cake__layer cake__layer--bottom"></div>
+                  <div class="cake__drip">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                  </div>
+                  <div class="cake__layer cake__layer--top"></div>
+                  <div class="candles" id="candles">
+                    <div class="candle"><div class="flame" aria-hidden="true"></div><div class="wick"></div><div class="stick"></div></div>
+                    <div class="candle"><div class="flame" aria-hidden="true"></div><div class="wick"></div><div class="stick"></div></div>
+                    <div class="candle"><div class="flame" aria-hidden="true"></div><div class="wick"></div><div class="stick"></div></div>
+                  </div>
+                </div>
+              </div>
+              <div id="balloons" class="balloons" aria-hidden="true"></div>
+            </div>
+
+          <!-- Card / Controls -->
+          <div class="card" id="card">
+            <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+              <div class="for"><p class="muted">Celebrating</p><h2 id="target-name">Sanjana</h2></div>
+            <div class="actions">
+              <button id="light-btn" type="button" class="btn btn-outline" aria-label="Light the candles">Light Candles</button>
+              <button id="wish-btn" type="button" class="btn btn-primary hidden" aria-label="Make a wish">Make a Wish</button>
+            </div>
+            <div class="message" id="message" aria-live="polite" aria-atomic="true"></div>
+            <p id="hint" class="hint">Press Light Candles to start.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">Made with love &amp; code • Enjoy your day! 🎂</footer>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
